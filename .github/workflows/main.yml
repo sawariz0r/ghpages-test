@@ -29,3 +29,14 @@ jobs:
         uses: JonathanTreffler/full-website-screenshot-action@v1.0
         with:
           url: "https://osuka.dev"
+      - name: Push to repository
+        # You may pin to the exact commit or the version.
+        # uses: tech-thinker/push-to-repo@a599ed57544bc8348c09cba83a5ffc790b2ead67
+        uses: tech-thinker/push-to-repo@v1.0.0
+        with:
+          # Source directory from the origin directory
+          source-directory: "./screenshot.png"
+          # Name of the destination username/organization
+          destination-github-username: "sawariz0r"
+          # Destination repository
+          destination-repository-name: "ghpages-test"
